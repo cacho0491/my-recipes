@@ -11,9 +11,6 @@ import * as actions from "./store/actions/index";
 
 class App extends React.Component {
   searchHandler = (e) => {
-    // if (this.props.search === "") {
-    //   this.props.onClearResults();
-    // }
     this.props.onSearch(e.target.value);
     const searchResult = this.props.recipes.filter((recipe) =>
       recipe.name.toLowerCase().includes(this.props.search)
